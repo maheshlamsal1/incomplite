@@ -46,3 +46,26 @@ function chang() {
 }
 
 setInterval(chang, 1000);
+const skill= document.querySelector(".skill-section");
+function newSkill(lang,wt){
+  let newS= document.createElement("div");
+  let newSa= document.createElement("div");
+  let newSas = document.createElement("div");
+  newSas.setAttribute("class","noth");
+  
+  newS.setAttribute("class","html");
+  newSa.setAttribute("class","fill");
+  newSas.innerHTML=`${lang}`
+  
+  skill.appendChild(newSas)
+  newSa.style.width=`${wt}%`
+  skill.appendChild(newS);
+  newS.appendChild(newSa);
+  if(newSas.innerHTML=='C'){
+    // newSas.style.color='blue'
+  }
+}
+newSkill('CSS',70)
+newSkill('JAVASCRIPT',60)
+newSkill('C',90)
+newSkill('JAVA',20)
